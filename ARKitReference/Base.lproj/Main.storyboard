@@ -34,11 +34,73 @@
                     <navigationItem key="navigationItem" title="Home" id="O9B-Ka-5qg"/>
                     <connections>
                         <segue destination="jTg-C8-dWU" kind="show" identifier="SCNGeometryVC" id="ZiJ-eT-94S"/>
+                        <segue destination="bCi-Mf-FAr" kind="show" identifier="RollDiceVC" id="XwO-sM-pMW"/>
+                        <segue destination="BOS-EF-Al1" kind="show" identifier="MeasureVC" id="K4R-CZ-86I"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bwi-Py-R1z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1110.6870229007634" y="38.732394366197184"/>
+        </scene>
+        <!--Measure Distance-->
+        <scene sceneID="hSj-L9-GdH">
+            <objects>
+                <viewController storyboardIdentifier="MeasureViewController" id="BOS-EF-Al1" customClass="MeasureViewController" customModule="ARKitReference" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dUI-Vx-Ozr">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dz3-VR-iEA">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                            </arscnView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="t25-cF-ocC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dz3-VR-iEA" firstAttribute="leading" secondItem="t25-cF-ocC" secondAttribute="leading" id="FrD-pf-oCf"/>
+                            <constraint firstItem="t25-cF-ocC" firstAttribute="trailing" secondItem="dz3-VR-iEA" secondAttribute="trailing" id="gR0-Rc-07w"/>
+                            <constraint firstAttribute="bottom" secondItem="dz3-VR-iEA" secondAttribute="bottom" id="glK-qf-bF5"/>
+                            <constraint firstItem="dz3-VR-iEA" firstAttribute="top" secondItem="t25-cF-ocC" secondAttribute="top" id="kzn-xh-L3y"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Measure Distance" id="3zh-rE-4gC"/>
+                    <connections>
+                        <outlet property="sceneView" destination="dz3-VR-iEA" id="45p-dI-DfM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="de4-n3-zTS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2018" y="399"/>
+        </scene>
+        <!--Roll Dice-->
+        <scene sceneID="bOb-tq-sTM">
+            <objects>
+                <viewController id="bCi-Mf-FAr" customClass="RollDiceViewController" customModule="ARKitReference" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Bj-oy-0yF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Kf-dI-Lm7">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                            </arscnView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4RW-Sv-OQc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Kf-dI-Lm7" firstAttribute="top" secondItem="4RW-Sv-OQc" secondAttribute="top" id="LPF-mi-ZSw"/>
+                            <constraint firstItem="2Kf-dI-Lm7" firstAttribute="leading" secondItem="4RW-Sv-OQc" secondAttribute="leading" id="cTA-Ik-wT0"/>
+                            <constraint firstAttribute="bottom" secondItem="2Kf-dI-Lm7" secondAttribute="bottom" id="d3Z-ZJ-POn"/>
+                            <constraint firstItem="4RW-Sv-OQc" firstAttribute="trailing" secondItem="2Kf-dI-Lm7" secondAttribute="trailing" id="g5i-DK-RVY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Roll Dice" id="NFd-Dz-bTw"/>
+                    <connections>
+                        <outlet property="sceneView" destination="2Kf-dI-Lm7" id="E8M-zL-z6m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3O9-Ph-fn6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2018" y="-238"/>
         </scene>
         <!--SCNGeometry-->
         <scene sceneID="wqb-Hk-S8F">
@@ -49,7 +111,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3q-II-bas">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
                             </arscnView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TsJ-CF-O8y">
                                 <rect key="frame" x="0.0" y="103" width="393" height="50"/>
@@ -107,7 +169,7 @@
                             <constraint firstItem="TsJ-CF-O8y" firstAttribute="top" secondItem="NxS-ye-rGn" secondAttribute="top" id="EhF-7D-VfS"/>
                             <constraint firstItem="O3q-II-bas" firstAttribute="top" secondItem="NxS-ye-rGn" secondAttribute="top" id="Xzf-ds-pwt"/>
                             <constraint firstItem="NxS-ye-rGn" firstAttribute="trailing" secondItem="TsJ-CF-O8y" secondAttribute="trailing" id="YWk-5V-Y3c"/>
-                            <constraint firstItem="NxS-ye-rGn" firstAttribute="bottom" secondItem="O3q-II-bas" secondAttribute="bottom" id="Zx1-FZ-irS"/>
+                            <constraint firstAttribute="bottom" secondItem="O3q-II-bas" secondAttribute="bottom" id="Zx1-FZ-irS"/>
                             <constraint firstItem="O3q-II-bas" firstAttribute="leading" secondItem="NxS-ye-rGn" secondAttribute="leading" id="dkJ-sD-c73"/>
                         </constraints>
                     </view>
@@ -118,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cTP-mV-JhH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2031" y="-154"/>
+            <point key="canvasLocation" x="2018" y="-885"/>
         </scene>
         <!--Navigation View Controller-->
         <scene sceneID="z7f-Zd-4Xy">

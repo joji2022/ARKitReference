@@ -29,7 +29,19 @@ class HomeTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: SegueIdentifiers.SCNGeometry, sender: nil)
+        
+        switch indexPath.row {
+        case 0:
+            performSegue(withIdentifier: SegueIdentifiers.SCNGeometry, sender: nil)
+        case 1:
+            performSegue(withIdentifier: SegueIdentifiers.RollDice, sender: nil)
+        case 2:
+            performSegue(withIdentifier: SegueIdentifiers.Measure, sender: nil)
+        default:
+            break
+        }
+        
+        
     }
 
 }

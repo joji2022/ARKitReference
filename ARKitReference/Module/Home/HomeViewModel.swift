@@ -13,6 +13,9 @@ protocol HomeViewModelProtocol {
 
 class HomeViewModel: HomeViewModelProtocol {
     
-    var homeItems = ["Create 3D Object using SCNBox"]
+    var homeItems = ["Create 3D Object using SCNGeometry",
+                     "Roll Dice",
+                     "Measure Distance"
+    ]
     
 }

@@ -29,5 +29,7 @@ struct StoryboardIdentifiers {
 struct SegueIdentifiers {
     
     static let SCNGeometry = "SCNGeometryVC"
+    static let RollDice = "RollDiceVC"
+    static let Measure = "MeasureVC"
     
 }
