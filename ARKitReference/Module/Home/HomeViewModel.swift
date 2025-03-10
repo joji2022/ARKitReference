@@ -15,7 +15,8 @@ class HomeViewModel: HomeViewModelProtocol {
     
     var homeItems = ["Create 3D Object using SCNGeometry",
                      "Roll Dice",
-                     "Measure Distance"
+                     "Measure Distance",
+                     "Live Tracking"
     ]
     
 }

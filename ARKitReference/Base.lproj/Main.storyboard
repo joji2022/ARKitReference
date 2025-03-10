@@ -36,6 +36,7 @@
                         <segue destination="jTg-C8-dWU" kind="show" identifier="SCNGeometryVC" id="ZiJ-eT-94S"/>
                         <segue destination="bCi-Mf-FAr" kind="show" identifier="RollDiceVC" id="XwO-sM-pMW"/>
                         <segue destination="BOS-EF-Al1" kind="show" identifier="MeasureVC" id="K4R-CZ-86I"/>
+                        <segue destination="agB-jj-NRZ" kind="show" identifier="LiveTrackingVC" id="MjG-ft-pwc"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bwi-Py-R1z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -70,7 +71,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="de4-n3-zTS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2018" y="399"/>
+            <point key="canvasLocation" x="3300" y="89"/>
+        </scene>
+        <!--Live Tracking-->
+        <scene sceneID="ckE-g8-eGB">
+            <objects>
+                <viewController storyboardIdentifier="LiveTrackingViewController" id="agB-jj-NRZ" customClass="LiveTrackingViewController" customModule="ARKitReference" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4xr-be-weC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bKc-O8-8Hr">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                            </arscnView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LEh-Zg-FKU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="bKc-O8-8Hr" secondAttribute="bottom" id="C3r-FU-hgz"/>
+                            <constraint firstItem="bKc-O8-8Hr" firstAttribute="top" secondItem="LEh-Zg-FKU" secondAttribute="top" id="CO8-hp-WFO"/>
+                            <constraint firstItem="bKc-O8-8Hr" firstAttribute="leading" secondItem="LEh-Zg-FKU" secondAttribute="leading" id="Zbg-1r-nC7"/>
+                            <constraint firstItem="LEh-Zg-FKU" firstAttribute="trailing" secondItem="bKc-O8-8Hr" secondAttribute="trailing" id="ciZ-1b-D9M"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Live Tracking" id="67z-5G-QfO"/>
+                    <connections>
+                        <outlet property="sceneView" destination="bKc-O8-8Hr" id="NZA-LW-V5c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EBf-dw-vkN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2011" y="482"/>
         </scene>
         <!--Roll Dice-->
         <scene sceneID="bOb-tq-sTM">
@@ -100,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3O9-Ph-fn6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2018" y="-238"/>
+            <point key="canvasLocation" x="2575" y="-291"/>
         </scene>
         <!--SCNGeometry-->
         <scene sceneID="wqb-Hk-S8F">
@@ -180,7 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cTP-mV-JhH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2018" y="-885"/>
+            <point key="canvasLocation" x="1871" y="-561"/>
         </scene>
         <!--Navigation View Controller-->
         <scene sceneID="z7f-Zd-4Xy">

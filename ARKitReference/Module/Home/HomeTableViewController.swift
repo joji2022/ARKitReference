@@ -37,6 +37,8 @@ class HomeTableViewController: UITableViewController {
             performSegue(withIdentifier: SegueIdentifiers.RollDice, sender: nil)
         case 2:
             performSegue(withIdentifier: SegueIdentifiers.Measure, sender: nil)
+        case 3:
+            performSegue(withIdentifier: SegueIdentifiers.LiveTracking, sender: nil)
         default:
             break
         }
